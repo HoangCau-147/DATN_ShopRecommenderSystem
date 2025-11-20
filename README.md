@@ -75,7 +75,8 @@ Advanced Technical Approaches:
 ## ⿻ Layer
 * The project applies the clean architecture principles to implement the code.
 
-``` Front-end
+### Front-end
+``` 
 └── 📁ShopRecommenderSystem
     └── 📁public
     └── 📁src
@@ -113,6 +114,32 @@ Advanced Technical Approaches:
         ├── index.js
         ├── cloudinaryConfig.js
     └── tailwind.config.js
+```
+
+### Back-end
+```
+└── 📁DATN_ShopRecommenderSystem
+    └── 📁DATN-ShopRecommenderSystem           => Main ASP.NET project (entry point, web API)
+        └── 📁Controllers                       => API endpoints / MVC controllers
+        └── 📁Extensions                        => Extension methods for reusable logic
+        └── 📁Helpers                           => Utility functions and helpers
+        └── 📁Properties                        => Project properties (AssemblyInfo, settings)
+    └── 📁ShopRe.Common                         => Shared/common code across layers
+        └── 📁DTOs                              => Data Transfer Objects
+        └── 📁FunctionCommon                     => Common functions/utilities
+        └── 📁RequestFeatures                    => Paging, filtering, query parameter features
+    └── 📁ShopRe.Data                           => Data access layer
+        └── 📁ConfigurationRole                 => Entity configuration for Roles/permissions
+        └── 📁Infrastructure                     => DbContext, database connections, core data logic
+        └── 📁Migrations                         => EF Core database migrations
+        └── 📁obj                                => Auto-generated build files
+        └── 📁Repositories                        => Repository implementations for data access
+    └── 📁ShopRe.Model                          => Domain layer
+        └── 📁Authentication                     => Auth-related domain models
+        └── 📁Models                             => Entity/domain models
+    └── 📁ShopRe.Service                        => Business logic layer / service implementations
+    └── 📁ShopRe.UnitTest                        => Unit tests for the project
+    ├── DATN-ShopRecommenderSystem.sln          => Solution file for the whole project
 ```
 
 ---
