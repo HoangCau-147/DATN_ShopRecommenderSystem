@@ -142,6 +142,22 @@ Advanced Technical Approaches:
     ├── DATN-ShopRecommenderSystem.sln          => Solution file for the whole project
 ```
 
+### NLP-model
+```
+└── 📁DATN_ShopRecommenderSystem
+    └── 📁data                       => Raw and processed datasets
+        ├── data.csv                 => Raw data
+        ├── data_processed.csv       => Preprocessed data
+    ├── data_preprocessing.py        => Text cleaning and preprocessing
+    ├── dataLoader.py                => Loads data for training/prediction
+    ├── model.py                     => PhoBERT model and training/prediction logic
+    ├── MultiClass_Classification.ipynb  => Notebook for rating classification experiments
+    ├── predict_comment*.py/.ipynb   => Scripts and notebooks to predict ratings from comments
+    ├── predicted_results.csv        => Stores predicted ratings
+    └── requirements.txt             => Python dependencies
+
+```
+
 ---
 
 ## 🌟 Core Features 
