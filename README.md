@@ -16,7 +16,7 @@
 
 ---
 
-## 📄 Context
+## 📝 Context
 In today’s era of digitalization and rapidly advancing technology, people are increasingly shifting their everyday needs to online platforms—such as making payments, working remotely, and especially shopping online through e-commerce websites, which are growing at a fast and widespread rate. Most types of products are now listed and traded on these e-commerce platforms.
 
 Currently, thousands of e-commerce websites exist both in Vietnam and around the world, offering a wide variety of product categories. However, due to the sheer number and scale of these platforms, many issues still persist—most notably problems related to product and store quality control. In reality, many users have encountered situations where the products they received did not match the description, or they ended up buying counterfeit or low-quality items. Moreover, finding the right product can take a significant amount of time, as users often need to search, compare, and analyze options across multiple stores.
@@ -28,30 +28,30 @@ The project is a store recommendation system developed as an e-commerce platform
 
 ---
 
-## 📲System Architecture
+## 🖧 System Architecture
 <p align="center">
  <img src="/report/systemarchitecture.png" alt="system architecture"></a>
 </p>
 
 ---
 
-## 📲All Features
+## ⚙️All Features
 
 The system consists of three main subsystems: Customer Users, Retailers, and Administrators. Each subsystem interacts with the system by performing the following functions:
 
-### Customer Users
+### 👨🏻‍👩🏻‍👦🏻‍👦🏻 Customer Users
 * Search for products
 * Purchase products
 * Add, Delete, Update products in the shopping cart
 * View product details
 
-#### Retailers 
+#### 🤝 Retailers 
 * Comment on and rate products
 * Manage profile: edit profile, addresses, etc.
 * Add, Delete, Update, View products
 * View and update order statuses
 
-#### Administrators
+#### 👨🏻‍💻 Administrators
 * Dashboard management
 * Update Neighborhood-based algorithm
 * Update Content-based algorithm
@@ -66,14 +66,14 @@ The system consists of three main subsystems: Customer Users, Retailers, and Adm
 
 ---
 
-## 💻 Algorithms
+## 🧠 Algorithms
 * Neighborhood-based Collaborative Filtering
 * Content-based Filtering
 * Matrix Factorization
 
 ---
 
-## 👨‍💻 Members
+## 👥 Members
 * NGUYỄN QUỐC ANH – 20120429 
 * TÔ TRẦN SƠN BÁ – 20120431 
 * HOÀNG  VĂN CẦU – 20120439 
@@ -98,10 +98,10 @@ https://github.com/HoangCau-147/DATN_ShopRecommenderSystem/tree/PyServer
 
 ---
 
-## Layer
+## ⿻ Layer
 * The project applies the clean architecture principles to implement the code.
 
-```
+``` Front-end
 └── 📁ShopRecommenderSystem
     └── 📁public
     └── 📁src
