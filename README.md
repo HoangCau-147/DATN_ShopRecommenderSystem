@@ -142,20 +142,32 @@ Advanced Technical Approaches:
     ├── DATN-ShopRecommenderSystem.sln          => Solution file for the whole project
 ```
 
-### NLP-model
+### NLP-model & Python Server
 ```
 └── 📁DATN_ShopRecommenderSystem
-    └── 📁data                       => Raw and processed datasets
+    └── 📁artifacts                  => Stored models, pickles, and intermediate outputs
+    └── 📁backup                     => Backup files and datasets
+    └── 📁data                        => Raw and processed datasets
         ├── data.csv                 => Raw data
         ├── data_processed.csv       => Preprocessed data
-    ├── data_preprocessing.py        => Text cleaning and preprocessing
-    ├── dataLoader.py                => Loads data for training/prediction
-    ├── model.py                     => PhoBERT model and training/prediction logic
-    ├── MultiClass_Classification.ipynb  => Notebook for rating classification experiments
-    ├── predict_comment*.py/.ipynb   => Scripts and notebooks to predict ratings from comments
-    ├── predicted_results.csv        => Stores predicted ratings
-    └── requirements.txt             => Python dependencies
-
+    ├── Cb_Store.py                   => Content-based store recommendation
+    ├── ContentBased.py               => Content-based product recommendation
+    ├── data_preprocessing.py         => Text/data preprocessing utilities
+    ├── dataLoader.py                 => Load and prepare data for training/prediction
+    ├── dockerfile / dockerfile2      => Docker configurations
+    ├── Environments.py               => Environment settings/configs
+    ├── final_predictions.pkl         => Saved prediction results
+    ├── Knn_List_Seller.pkl           => KNN results for sellers
+    ├── Knn_List_User.pkl             => KNN results for users
+    ├── main.py                       => Entry point to run the system
+    ├── model.py                      => PhoBERT model and training/prediction logic
+    ├── NeighborhoodBased.py          => Neighborhood-based collaborative filtering
+    ├── predict_coment_real.py        => Real-time comment prediction
+    ├── requirements.txt              => Python dependencies
+    ├── Schedule.py                   => Scheduling tasks
+    ├── SetupDocker.txt                => Docker setup instructions
+    ├── UpdateModelEs.py              => Update Elasticsearch with model predictions
+    └── vietnamese.txt                 => Vietnamese stopwords / text resources
 ```
 
 ---
