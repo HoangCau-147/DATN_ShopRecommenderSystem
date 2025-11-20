@@ -35,7 +35,7 @@
 - [👥 Members](#-members)
 - [ℹ️ Source](#source)
 
---
+---
 
 ## 📝 Context
 In today’s era of digitalization and rapidly advancing technology, people are increasingly shifting their everyday needs to online platforms—such as making payments, working remotely, and especially shopping online through e-commerce websites, which are growing at a fast and widespread rate. Most types of products are now listed and traded on these e-commerce platforms.
@@ -174,18 +174,18 @@ Advanced Technical Approaches:
 
 ## 🌟 Core Features 
 ### 1. Store Recommendation
-* Algorithm: Combines Neighborhood-based Collaborative Filtering with Matrix Factorization, enhanced by K-means clustering.
-* Process:
+* **Algorithm**: Combines Neighborhood-based Collaborative Filtering with Matrix Factorization, enhanced by K-means clustering.
+* **Process**:
     - Preprocess data from Tiki: build user-store rating matrix and implicit feedback matrix.
     - Train NLP model (PhoBERT) to analyze user comments and convert text reviews into numeric ratings.
-        - Step 1: Data Collection
+        - **Step 1**: Data Collection
             - Collect a dataset of user comments from your platform (or from Tiki).
             - Structure:
                 ```| content | label |```
             - content: the text of the user comment
             - label: numeric rating (1–5 stars)
 
-        - Step 2: Preprocessing
+        - **Step 2**: Preprocessing
             - Clean text for Vietnamese NLP:
             - Remove HTML tags, special characters, and unnecessary symbols.
             - Normalize Vietnamese text (unify old/new diacritics).
@@ -198,7 +198,7 @@ Advanced Technical Approaches:
                 Input: "<html>This is a <b>sample</b> text. Đây là một đoạn văn bản <i>mẫu</i>.</html>"
                 Output: "this is a sample text đây là một đoạn văn_bản_mẫu"
                 ```
-        - Step 3: Tokenization
+        - **Step 3**: Tokenization
             - Use PhoBERT tokenizer:
                 ```Python
                 from transformers import PhobertTokenizer
@@ -207,15 +207,15 @@ Advanced Technical Approaches:
                 ```
             - Converts text into input IDs and attention masks for the model.
 
-        - Step 4: Model Setup
+        - **Step 4**: Model Setup
             - Use PhoBERT for sequence classification:
-                ```
+                ```Python
                 from transformers import TFRobertaForSequenceClassification
                 num_labels = 5  # for 1-5 star ratings
                 model = TFRobertaForSequenceClassification.from_pretrained('vinai/phobert-base', num_labels=num_labels)
                 ```
             - Fine-tune PhoBERT on your dataset with a classification objective (cross-entropy loss for rating prediction).
-        - Step 5: Training
+        - **Step 5**: Training
             - Split dataset into train/test sets.
             - Train with typical NLP steps:
                 - Forward pass: compute predictions for a batch.
@@ -223,15 +223,15 @@ Advanced Technical Approaches:
                 - Backpropagate gradients.
                 - Update weights (optimizer: AdamW, learning rate scheduler optional).
             - Iterate over multiple epochs until convergence.
-        - Step 6: Evaluation
+        - **Step 6**: Evaluation
             - Evaluate on test set: accuracy or F1-score.
             - Ensure the model correctly predicts numeric ratings from comments.
-        - Step 7: Deployment
-* Result: For a logged-in user, the system returns a ranked list of stores based on predicted ratings combined with product info from Elasticsearch.
+        - **Step 7**: Deployment
+* **Result**: For a logged-in user, the system returns a ranked list of stores based on predicted ratings combined with product info from Elasticsearch.
 
 ### 2. Product Recommendation
-* Algorithm: Content-based Filtering.
-* Process:
+* **Algorithm**: Content-based Filtering.
+* **Process**:
     - Reduce search space by categorizing products.
     - Convert product name, brand, and store info into feature vectors (with text preprocessing: stopwords removal, normalization, stemming).
     - Compute cosine similarity between products.
