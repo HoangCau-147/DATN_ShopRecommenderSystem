@@ -12,7 +12,7 @@
 
 ---
 <p align="center">
- <img src="/report/logo.png" alt="Logo" height = "400">ShopLY</a>
+ <img src="/report/logo.png" alt="Logo" height = "400"></a>
 </p>
 
 <h2 align="center">Store Recommendation System</h2>
